@@ -11,7 +11,7 @@ function fetchJSONData() {
         })
         // Fetch request successful
         .then((data) => 
-              console.log(data[0].borders))
+              console.log(data))
         // Fetch Request failed
         .catch((error) => 
                console.error("Unable to fetch data:", error));
