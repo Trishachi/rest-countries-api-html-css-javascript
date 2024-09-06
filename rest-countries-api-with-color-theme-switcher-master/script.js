@@ -1,7 +1,7 @@
 // Fetch Data from endpoint
 
 function fetchJSONData() {
-    fetch("data.json")
+    fetch("https://restcountries.com/v3.1/all")
         .then((res) => {
             if (!res.ok) {
                 throw new Error
@@ -13,9 +13,9 @@ function fetchJSONData() {
         .then(data => {
             console.log(data);
             data.forEach((country) => {
-                console.log(country.name)
+                console.log(country.name.common)
                 const para = document.createElement("p");
-                const node = document.createTextNode(country.name);
+                const node = document.createTextNode(country.name.common);
                 para.appendChild(node);
         
                 document.getElementById('results').appendChild(para);
