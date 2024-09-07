@@ -13,12 +13,24 @@ function fetchJSONData() {
         .then(data => {
             console.log(data);
             data.forEach((country) => {
-                console.log(country.name.common)
-                const para = document.createElement("p");
-                const node = document.createTextNode(country.name.common);
-                para.appendChild(node);
+                //console.log(country.flags.svg)
+
+                //Create HTML Elements 
+                let image = document.createElement("img");
+                image.src = country.flags.svg;
+                let title = document.createElement("h2");
+                title.innerText = country.name.common;
+                let population = document.createElement("p");
+                population.innerText = country.population;
+                let region = document.createElement("p");
+                region.innerText = country.region;
+                let capital =  document.createElement("p");
+                capital.innerText = country.capital;
+
+                //Create card and add data to card
+                
         
-                document.getElementById('results').appendChild(para);
+                document.getElementById('results').appendChild(capital);
             }
         );
 
