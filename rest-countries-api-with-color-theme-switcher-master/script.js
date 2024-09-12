@@ -32,7 +32,7 @@ function fetchJSONData() {
                 const {flags, name, population} = country;
                 cardsHTML += `
                 <div class="container">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card col-4"  style="width: 18rem;">
                         <img class="card-img-top" src="${flags.svg}" alt="Flag of ${name.common}">
                         <div class="card-body">
                             <h2 class="card-title">${name.common}</h2>
